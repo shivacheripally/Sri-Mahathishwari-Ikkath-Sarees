@@ -1,0 +1,38 @@
+.widget{
+  background-color: rgb(230, 229, 229);
+  width: 250px;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 0px 5px 1px black;
+}
+
+.widget img{
+  height: 300px;
+  width: 250px;
+}
+
+.product_info{
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.buttons{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_container{
+  margin: 30px 0px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
