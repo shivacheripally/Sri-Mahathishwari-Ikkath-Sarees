@@ -1,0 +1,70 @@
+/* header-start */
+.div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .white-color{
+    color: white;
+  }
+  
+  .bi-facebook{
+    background-color: white;
+    border-radius: 100%;
+  }
+  
+  .bi-whatsapp{
+    background-color: green;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  
+  .logo-img{
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .email{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .company-name{
+    height: max-content;
+  }
+  
+  .dropdown-toggle{
+    margin-left: 20px;
+  }
+  
+  @media (max-width:500px){
+    .logo-img{
+      margin-left: 35%;
+    }
+  
+    .company-name{
+      margin-left: 10%;
+    }
+  }
+  
+  @media (max-width : 350px){
+    .company-name{
+      margin-left: 1%;
+    }
+  }
+  
+  .bg-black{
+    background-color: black;
+  }
+  
+  .contact{
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* header-end */
