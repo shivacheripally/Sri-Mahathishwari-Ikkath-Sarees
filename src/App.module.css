@@ -64,14 +64,14 @@
 }
 
 @media screen and (max-width: 1024px){
-  #footer{
+  .footer{
     display: flex;
     flex-direction: column;
   }
 } 
 
 @media screen and (max-width: 425px) {
-  #footer iframe{
+  .footer iframe{
     width: 90%;
     height: 250px;
   }
