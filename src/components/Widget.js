@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from '../App.module.css';
 
 function BuyNow(imageUrl, cost) {
-    const phoneNumber = "9848963748"; // Replace with the actual phone number
-    const message = `Hey, I want to buy this product which costs ${cost}. Please have a look at the product Image: ${imageUrl}`;
+    const phoneNumber = "9030903058"; // Replace with the actual phone number
+    const message = `Hey, I want to buy this product which costs ${cost}.\n \nPlease have a look at the product Image: \n\n${imageUrl}`;
   
     // Encode the message and phone number for URL
     const encodedMessage = encodeURIComponent(message);
@@ -37,9 +37,11 @@ export default function Widget(props){
     console.log("name", name);
     return(
         <div className={styled.widget}>
-                <img src={imageUrl} alt={"image"+id} />
+                <div className={styled.image}>
+                    <img src={imageUrl} alt={"image"+id} />
+                </div>
                 <div className={styled.product_info}>
-                    {/* <span> {name}</span> */}
+                    <span> {name}</span>
                     <span>Price: <b>{cost}</b></span>
                 </div>
                 <div className={styled.buttons}>
