@@ -1,10 +1,12 @@
 import React from "react";
 import './Navbar.css';
+import Favorite from "./Favorite";
 
 export default function Navbar(){
     return (
         <>
         <nav className="navbar navbar-expand-lg bg-black">
+          <Favorite />
           <div className="container-fluid">
             <img src="https://i.ibb.co/7jwyxj0/logo.jpg" alt="logo" className="logo-img" />
             <a className="navbar-brand company-name" href="#footer"><span className="white-color">Sri Mahathishwari Ikkath Sarees</span></a>

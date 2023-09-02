@@ -1,7 +1,6 @@
 .widget{
   background-color: rgb(230, 229, 229);
   width: 250px;
-  /* height: 400px; */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -44,7 +43,7 @@
   margin-right: 10px;
 }
 
-#footer{
+.footer{
   height: auto;
   width: 100%;
   background-color: black;

@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';
 import Widget from './Widget';
 import db from '../FirebaseInit';
@@ -9,16 +9,17 @@ export default function Body(){
 
     useEffect(()=>{
         async function fetchData(){
-            try{
-                const querySnapshot = await getDocs(collection(db, "rates"));
-                const data = querySnapshot.docs.map((doc)=>({id: doc.id, ...doc.data()}));
-                setData(data);
+            onSnapshot(
+                collection(db, "rates"), 
+                (snapshot) => {
+                    const data = snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()}));
+                    setData(data);
+                },
+                (error) => {
+                    console.log('Error While Fecthing Data: ');
+                    return ;
+                });
             }
-            catch{
-                console.log('Error While Fecthing Data: ');
-                return ;
-            }
-        }
         fetchData();
     },[setData])
 

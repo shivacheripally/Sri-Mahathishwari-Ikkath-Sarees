@@ -31,6 +31,7 @@ export default function Widget(props){
         setFav(updatedFav);
         localStorage.setItem('fav', JSON.stringify(updatedFav)); // Convert array to JSON string before storing
         console.log("fav", updatedFav);
+        alert('Add to cart is not available right now!');
     }
 
     console.log("name", name);
