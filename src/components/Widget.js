@@ -17,7 +17,6 @@ function BuyNow(imageUrl, cost) {
 export default function Widget(props){
     const {imageUrl, id, cost, name} = props;
     const [fav, setFav] = useState([]);
-
     useEffect(() => {
         const favorites = localStorage.getItem('fav');
     
@@ -26,15 +25,12 @@ export default function Widget(props){
         }
     }, []);
     
-    function AddToCart(imageUrl, cost, name) {
-        const updatedFav = [...fav, { imageUrl, cost, name }];
+    function AddToCart(imageUrl, cost, name, id) {
+        const updatedFav = [...fav, { imageUrl, cost, name, id }];
         setFav(updatedFav);
         localStorage.setItem('fav', JSON.stringify(updatedFav)); // Convert array to JSON string before storing
-        console.log("fav", updatedFav);
-        alert('Add to cart is not available right now!');
     }
 
-    console.log("name", name);
     return(
         <div className={styled.widget}>
                 <div className={styled.image}>
@@ -42,11 +38,12 @@ export default function Widget(props){
                 </div>
                 <div className={styled.product_info}>
                     <span> {name}</span>
-                    <span>Price: <b>{cost}</b></span>
+                    <br />
+                    <span>Price: <b>{cost} ₹/-</b></span>
                 </div>
                 <div className={styled.buttons}>
                     <button onClick={()=>{BuyNow(imageUrl, cost)}} className="btn btn-primary">Buy Now</button>
-                    <button onClick={()=>{AddToCart(imageUrl, cost, name)}} className="btn btn-primary">Add to cart</button>
+                    <button onClick={()=>{AddToCart(imageUrl, cost, name, id)}} className="btn btn-primary">Add to cart</button>
                 </div>
             </div>
     );
