@@ -1,7 +1,7 @@
 .widget{
   background-color: rgb(230, 229, 229);
   width: 250px;
-  height: 380px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   text-align: center;
